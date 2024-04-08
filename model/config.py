@@ -6,11 +6,11 @@ import os
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Experiment and Training Settings.")
     
-    # 针对实验的设置
+    # Experiment-specific settings
     parser.add_argument('--experiment_mode', type=str, default="random", choices=['actor-critic', 'greedy', 'random'], help="Choose the method: actor-critic or greedy.")
     parser.add_argument('--if_only_top_down', type=bool, default=False)
 
-    # 以下为GNN-DRL的训练设置
+    # The following is the training setup for GNN-DRL
     parser.add_argument('--model_mode', type=str, default='GCN')
     parser.add_argument('--n_epoch', type=int, default=1000)
     parser.add_argument('--n_hid', type=int, default=512)
@@ -22,10 +22,10 @@ def parse_arguments():
 
 args = parse_arguments()
 
-# 设备设置
+# Device Settings
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-# 其他全局变量
+# Other global variables
 max_distance = 1250
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
