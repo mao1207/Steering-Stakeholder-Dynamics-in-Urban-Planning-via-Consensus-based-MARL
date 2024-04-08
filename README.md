@@ -29,4 +29,3 @@ python model/main.py --experiment_mode your_model --if_only_top_down decentraliz
 You can download the dataset from [Urbanity](https://github.com/winstonyym/urbanity), which includes data from 50 cities from different regions. You can run `Urbanity/get_city_graphs.py` for processing, including getting 50 global city graphs and their subgraphs. You can choose to train on these subgraphs or the global city graph and eventually test the results on the complete graph.
 
 ![Experimental Results Image 2](https://github.com/mao1207/Steering-Stakeholder-Dynamics-in-Urban-Planning-via-Consensus-based-MARL/blob/main/imgs/Urbanity.png?raw=true)
-"""
